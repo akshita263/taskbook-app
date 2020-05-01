@@ -14,13 +14,13 @@ export default Header;
 const styles= StyleSheet.create({
     container:{
       height: 60,
-      padding:15,
+      padding:10,
       alignItems:'center',
       backgroundColor: 'darkslateblue',
     },
     text: {
       color:  'white',
-      fontSize: 30,
+      fontSize: 32,
       textAlign: 'center',
     },
   });
