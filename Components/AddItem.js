@@ -1,12 +1,16 @@
 import React, {useState}  from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
-const AddItem = () => {
+const AddItem = ({title, addItem}) => {
     const [text, setText] = useState('');
+
+    const onChange = textValue => setText(textValue);
+
     return (
         <View>
-            <TextInput placeholder='Add a new Task' style={styles.input}/>
-            <TouchableOpacity style={styles.btn}>
+            <TextInput placeholder='Add a new Task' style={styles.input} onChangeText={onChange}/>
+            <TouchableOpacity style={styles.btn}
+            onPress= {() => addItem(text)}>
                 <Text style={styles.btnText}>
                 ADD</Text>
                           
