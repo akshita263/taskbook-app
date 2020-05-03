@@ -28,19 +28,20 @@ const styles = StyleSheet.create({
         fontSize: 20,
         borderColor: 'black',
         borderWidth: 2,
-        margin:5,
-        marginBottom: 1,
+        margin:10,
+        marginBottom: 2,
+        marginTop: 10
     },
     btn:{
-        backgroundColor: 'darkslateblue',
+        backgroundColor: '#35a79c',
         padding:10,
-        margin: 5,        
-        marginTop: 0,
+        margin: 10,        
+        marginTop: 2,
         marginBottom: 15,
     },
     btnText:{
         color: 'white',
         textAlign: 'center',
-        fontSize: 15,
+        fontSize: 20,
     }
 });

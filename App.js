@@ -6,7 +6,6 @@ import AddItem from './Components/AddItem';
 
 const App = ()=> {
   const[items, setItems] = useState([
-    
   ]);
 
   const deleteItem = (id) =>{
@@ -19,16 +18,12 @@ const App = ()=> {
     setItems(prevItems=> {
       return [{id: Math.random(), text}, ...prevItems];
     });
-
   }
-
-  
+ 
   return(
     <View style= {styles.container}>  
       <Header title= 'Taskbook'/>
-      <AddItem
-      addItem= {addItem}
-      />
+      
       <FlatList
       data={items}
       renderItem= {({item}) => 
@@ -36,6 +31,9 @@ const App = ()=> {
       item= {item}
       deleteItem= {deleteItem}
       />}
+      />
+      <AddItem
+      addItem= {addItem}
       />
     </View>
 
