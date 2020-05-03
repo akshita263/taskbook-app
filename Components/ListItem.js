@@ -9,7 +9,7 @@ const ListItem = ({item, deleteItem}) => {
                 <Text style={{ fontSize: 18}}>
                     {item.text }
                 </Text>
-                <Icon name="delete" size={20} color="firebrick"
+                <Icon name="delete" size={20} color="#bbb"
                 onPress={()=> deleteItem(item.id)}/>                 
             </View>
         </TouchableOpacity>

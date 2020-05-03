@@ -6,6 +6,7 @@ import AddItem from './Components/AddItem';
 
 const App = ()=> {
   const[items, setItems] = useState([
+    
   ]);
 
   const deleteItem = (id) =>{
@@ -43,7 +44,8 @@ const App = ()=> {
 const styles= StyleSheet.create({
   container: {
     flex:1,
-    paddingTop:20,
+    paddingTop:0,
+    backgroundColor: '#fffef9',
   },
 });
 
