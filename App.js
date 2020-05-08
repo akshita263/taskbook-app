@@ -1,44 +1,18 @@
-import React, {useState} from 'react';
+import React, {Component} from 'react';
 import { View, Text, StyleSheet, FlatList, Alert } from 'react-native';
-import Header from './Components/Header';
-import ListItem from './Components/ListItem';
-import AddItem from './Components/AddItem';
+import TodoApp from './src/TodoApp';
+import store from './src/store'
+import { Provider } from 'react-redux';
 
-const App = ()=> {
-  const[items, setItems] = useState([
-    
-  ]);
+export default class App extends React.Component{
 
-  const deleteItem = (id) =>{
-    setItems(prevItems =>{
-      return prevItems.filter(item=> item.id != id );
-    });
+  render(){
+    return(
+      <Provider store= {store} >
+        <TodoApp />
+      </Provider>
+    )
   }
-
-  const addItem = (text) =>{
-    setItems(prevItems=> {
-      return [{id: Math.random(), text}, ...prevItems];
-    });
-  }
- 
-  return(
-    <View style= {styles.container}>  
-      <Header title= 'Taskbook'/>
-      
-      <FlatList
-      data={items}
-      renderItem= {({item}) => 
-      <ListItem 
-      item= {item}
-      deleteItem= {deleteItem}
-      />}
-      />
-      <AddItem
-      addItem= {addItem}
-      />
-    </View>
-
-  )
 }
 
 const styles= StyleSheet.create({
@@ -49,4 +23,3 @@ const styles= StyleSheet.create({
   },
 });
 
-export default App;
